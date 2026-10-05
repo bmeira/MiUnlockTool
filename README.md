@@ -33,6 +33,17 @@ pip install miunlock
 
 > See the **[Installation Guide](INSTALL.md)** for detailed instructions.
 
+### Run temporarily with Nix
+
+With Nix and a `<nixpkgs>` channel available, run the tool from the repository without installing it into your system Python:
+
+```sh
+nix-shell
+miunlock
+```
+
+The shell provides MiUnlockTool and Android `fastboot`; type `exit` to leave it. Nix may keep downloaded dependencies in its store for reuse. USB device permissions may still need to be configured on your system. Bootloader unlocking can erase your data and reduce device security; read the [unlock guide](unlock_guide.md) before proceeding.
+
 ---
 
 ## Usage
